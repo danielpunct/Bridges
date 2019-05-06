@@ -6,10 +6,6 @@ public class MenuManager : Singleton<MenuManager>
     public GameObject homeScreen;
     public GameObject gameScreen;
 
-    void Start()
-    {
-        _Reset();
-    }
 
     public void _Reset()
     {

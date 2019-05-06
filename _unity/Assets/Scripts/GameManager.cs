@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Gamelogic.Extensions;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    // Start is called before the first frame update
+    PlayerState Player { get; set; }
+    
     void Start()
     {
-        
+        Player = new PlayerState();
+        MenuManager.Instance._Reset();
+        GameArena.Instance._Reset();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayGame()
     {
-        
+        GameArena.Instance.StartLevel(Player.CurrentLevel);
     }
 }
