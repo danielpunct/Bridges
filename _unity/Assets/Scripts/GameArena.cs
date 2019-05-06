@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Gamelogic.Extensions;
+﻿using Gamelogic.Extensions;
 using UnityEngine;
 
 public class GameArena : Singleton<GameArena>
@@ -18,11 +16,15 @@ public class GameArena : Singleton<GameArena>
             Destroy(_loadedLevel.gameObject);
         }
     }
-    
+
     public void StartLevel(int index)
     {
         _Reset();
 
-        _loadedLevel = Instantiate(levelsPrefabs[index], levelHolder).GetComponent<Level>();
+        if (levelsPrefabs.Length > index)
+        {
+            _loadedLevel = Instantiate(levelsPrefabs[index], levelHolder).GetComponent<Level>();
+        }
     }
+
 }

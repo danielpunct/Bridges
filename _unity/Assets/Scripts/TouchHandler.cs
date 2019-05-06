@@ -26,5 +26,10 @@ public class TouchHandler : Singleton<TouchHandler>
         OnTouchRotate?.Invoke(delta.x * 0.5f);
     }
 
+    public void InterruptSession()
+    {
+//        LeanTouch.
+    }
+
     public static Action<float> OnTouchRotate;
 }

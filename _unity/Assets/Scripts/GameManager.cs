@@ -18,4 +18,11 @@ public class GameManager : Singleton<GameManager>
     {
         GameArena.Instance.StartLevel(Player.CurrentLevel);
     }
+
+    public void PassedLevel()
+    {
+        TouchHandler.Instance.InterruptSession();
+        Player.LevelPassed();
+        GameArena.Instance.StartLevel(Player.CurrentLevel);
+    }
 }

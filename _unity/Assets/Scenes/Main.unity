@@ -1987,8 +1987,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   __messageText: 
   levelsPrefabs:
-  - {fileID: 8311772675429560001, guid: 37965fdf6648f0340a861fdd38acb944, type: 3}
-  - {fileID: 8311772675429560001, guid: 9adf7b86683c424488d90d2fe1a1ee7d, type: 3}
+  - {fileID: 1964486888764165817, guid: d688858d898eeeb438e55b8a4a7b05e7, type: 3}
+  - {fileID: 666194514545752823, guid: bcf4d09e8f9a6644ab01a9c41752eea2, type: 3}
+  - {fileID: 666194514545752823, guid: 164fc07eedb6bcc4086193dbad9b3d0a, type: 3}
   levelHolder: {fileID: 559498217}
 --- !u!1 &1525346066
 GameObject:

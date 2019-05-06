@@ -14,7 +14,7 @@ public class Rotator : MonoBehaviour
 
     void OnDisable()
     {
-        TouchHandler.OnTouchRotate += Rotate;
+        TouchHandler.OnTouchRotate -= Rotate;
         
     }
 

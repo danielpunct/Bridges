@@ -10,6 +10,12 @@ public class PlayerState
    public  PlayerState()
    {
       UnlockedLevel = 2;
-      CurrentLevel = 1;
+      CurrentLevel = 0;
+   }
+
+   public void LevelPassed()
+   {
+      CurrentLevel++;
+      UnlockedLevel = Mathf.Max(UnlockedLevel, CurrentLevel);
    }
 }
