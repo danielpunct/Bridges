@@ -6,7 +6,6 @@ public class HomeScreen : MonoBehaviour
 {
    public void OnPlayClick()
    {
-      MenuManager.Instance.ShowGameMenu();
       GameManager.Instance.PlayGame();
    }
 }

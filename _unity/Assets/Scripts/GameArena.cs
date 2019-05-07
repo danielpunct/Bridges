@@ -26,5 +26,4 @@ public class GameArena : Singleton<GameArena>
             _loadedLevel = Instantiate(levelsPrefabs[index], levelHolder).GetComponent<Level>();
         }
     }
-
 }

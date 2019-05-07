@@ -28,7 +28,7 @@ public class TouchHandler : Singleton<TouchHandler>
         
         var delta = LeanGesture.GetScreenDelta(fingers);
 
-        OnTouchRotate?.Invoke(-Mathf.Clamp(delta.x * 0.35f, -4, 4));
+        OnTouchRotate?.Invoke(-Mathf.Clamp(delta.x * 0.5f, -5, 5));
     }
 
    

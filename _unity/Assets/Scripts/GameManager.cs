@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Gamelogic.Extensions;
-using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    PlayerState Player { get; set; }
+    public int LoadedLevels => GameArena.Instance.levelsPrefabs.Length;
+
+    public PlayerState Player { get; private set; }
     public GameState State { get; private set; }
 
     Sequence _seq;
@@ -15,7 +14,7 @@ public class GameManager : Singleton<GameManager>
     {
         Player = new PlayerState();
         
-        MenuManager.Instance._Reset();
+        MenuManager.Instance.Init();
         GameArena.Instance._Reset();
 
         State = GameState.Menu;
@@ -23,7 +22,16 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayGame()
     {
-       StartNextLevel();
+        PlayLevel(Player.CurrentLevel);
+    }
+
+    public void PlayLevel(int levelIndex)
+    {
+        _seq?.Kill();
+        State = GameState.Play;
+
+        MenuManager.Instance.ShowGameMenu(levelIndex);
+        GameArena.Instance.StartLevel(levelIndex);
     }
 
     public void PassedLevel()
@@ -34,16 +42,33 @@ public class GameManager : Singleton<GameManager>
         
         _seq?.Kill();
         _seq = DOTween.Sequence()
-            .InsertCallback(3, StartNextLevel);
+            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
     }
 
-    void StartNextLevel()
+    public void PlayerDied()
     {
-        State = GameState.Play;
-
-        GameArena.Instance.StartLevel(Player.CurrentLevel);
+        State = GameState.LevelEnding;
+        
+        _seq?.Kill();
+        _seq = DOTween.Sequence()
+            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
     }
 
+    public void PlayerOutOfBounds()
+    {
+        MenuManager.Instance.gameScreen.ShowOutOfBounds();
+        State = GameState.LevelEnding;
+        
+        _seq?.Kill();
+        _seq = DOTween.Sequence()
+            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
+    }
+
+    public void OnMenuButtonClick()
+    {
+        State = GameState.Menu;
+        MenuManager.Instance.ShowLevelsMenu();
+    }
 }
 
 public enum GameState
