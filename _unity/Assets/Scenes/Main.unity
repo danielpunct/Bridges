@@ -5927,6 +5927,10 @@ MonoBehaviour:
   - {fileID: 666194514545752823, guid: 745d6c07ddabbda45a4b4e37eb1b91e0, type: 3}
   - {fileID: 666194514545752823, guid: 0ec2f194ad9578a45a52c3b46ff1c15e, type: 3}
   - {fileID: 666194514545752823, guid: 16b871a209fee4346aba1be714195e9e, type: 3}
+  - {fileID: 666194514545752823, guid: e9b0792f8b7ab8649b43c4818e1f218b, type: 3}
+  - {fileID: 666194514545752823, guid: 491033802cacc2b4ebe809f4da720fa2, type: 3}
+  - {fileID: 666194514545752823, guid: 7c7b1d04dd9ad2b43b406eca7d5aa566, type: 3}
+  - {fileID: 666194514545752823, guid: 4b312c9d69c7632428d090a5be80028b, type: 3}
   levelHolder: {fileID: 559498217}
 --- !u!1001 &1457035384
 PrefabInstance:
