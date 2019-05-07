@@ -3,7 +3,7 @@ _unity/Temp/*
 _unity/obj/*
 builds/*
 out/*
-ress/*
+_ress/*
 _unity/.vs/*
 _unity/etc/*
 _unity/Logs/*

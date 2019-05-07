@@ -13,7 +13,7 @@ public class PlayerState
       CurrentLevel = 0;
    }
 
-   public void LevelPassed()
+   public void SaveLevelPassed()
    {
       CurrentLevel++;
       UnlockedLevel = Mathf.Max(UnlockedLevel, CurrentLevel);

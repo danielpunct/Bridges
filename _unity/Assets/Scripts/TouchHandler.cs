@@ -21,15 +21,17 @@ public class TouchHandler : Singleton<TouchHandler>
 
     public void OnGesture(List<LeanFinger> fingers)
     {
+        if (GameManager.Instance.State != GameState.Play)
+        {
+            return;
+        }
+        
         var delta = LeanGesture.GetScreenDelta(fingers);
 
-        OnTouchRotate?.Invoke(delta.x * 0.5f);
+        OnTouchRotate?.Invoke(-Mathf.Clamp(delta.x * 0.35f, -4, 4));
     }
 
-    public void InterruptSession()
-    {
-//        LeanTouch.
-    }
+   
 
     public static Action<float> OnTouchRotate;
 }
