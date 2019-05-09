@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using Gamelogic.Extensions;
+using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -9,10 +10,14 @@ public class GameManager : Singleton<GameManager>
     public GameState State { get; private set; }
 
     Sequence _seq;
-    
-    void Start()
+
+    void Awake()
     {
         Player = new PlayerState();
+    }
+
+    void Start()
+    {
         
         MenuManager.Instance.Init();
         GameArena.Instance._Reset();
@@ -37,6 +42,7 @@ public class GameManager : Singleton<GameManager>
 
     public void PassedLevel()
     {
+        SoundManager.Instance.PlaySuccess();
         State = GameState.LevelEnding;
         
         Player.SaveLevelPassed();

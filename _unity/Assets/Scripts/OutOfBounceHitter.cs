@@ -9,6 +9,8 @@ public class OutOfBounceHitter : MonoBehaviour
         if (GameManager.Instance.State == GameState.Play)
         {
             GameManager.Instance.PlayerOutOfBounds();
+            
+            SoundManager.Instance.PlayOutOfBounds();
         }
     }
 }
