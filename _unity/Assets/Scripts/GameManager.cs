@@ -32,17 +32,18 @@ public class GameManager : Singleton<GameManager>
 
         MenuManager.Instance.ShowGameMenu(levelIndex);
         GameArena.Instance.StartLevel(levelIndex);
+        Player.SetLevelStart(levelIndex);
     }
 
     public void PassedLevel()
     {
-//        State = GameState.LevelEnding;
-//        
-//        Player.SaveLevelPassed();
-//        
-//        _seq?.Kill();
-//        _seq = DOTween.Sequence()
-//            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
+        State = GameState.LevelEnding;
+        
+        Player.SaveLevelPassed();
+        
+        _seq?.Kill();
+        _seq = DOTween.Sequence()
+            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
     }
 
     public void PlayerDied()
@@ -51,7 +52,7 @@ public class GameManager : Singleton<GameManager>
         
         _seq?.Kill();
         _seq = DOTween.Sequence()
-            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
+            .InsertCallback(1, () => PlayLevel(Player.CurrentLevel));
     }
 
     public void PlayerOutOfBounds()

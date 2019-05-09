@@ -17,13 +17,12 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log(other.contacts[0].normalImpulse);
+        var impulse = other.contacts[0].normalImpulse;
+        Debug.Log(impulse);
         var v = _rb.velocity.magnitude;
 
-        if (v > 1)
+        if (impulse > 1)
         {
-//            collideEffectHolder.SetActive(false);
-//            collideEffectHolder.SetActive(true);
             var g =Instantiate(collideEffectHolder, other.contacts[0].point, Quaternion.identity,
                 transform.parent);
             g.SetActive(true);
