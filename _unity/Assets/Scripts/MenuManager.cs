@@ -10,7 +10,7 @@ public class MenuManager : Singleton<MenuManager>
 
     public void Init()
     {
-        levelsScreen.Init(40);
+        levelsScreen.Init(GameManager.Instance.Player.MaxLoadedLevel+1);
         ShowHomeMenu();
     }
 
