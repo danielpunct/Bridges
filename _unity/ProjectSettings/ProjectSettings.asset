@@ -161,6 +161,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.sealedlab.bridges
     Standalone: com.Company.ProductName
+    iPhone: com.sealedlab.bridges
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16

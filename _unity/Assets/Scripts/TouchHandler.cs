@@ -7,6 +7,9 @@ using UnityEngine;
 
 public class TouchHandler : Singleton<TouchHandler>
 {
+    public static Action<float> OnTouchRotate;
+    float _clampValue = 20;
+    
     protected virtual void OnEnable()
     {
         // Hook into the events we need
@@ -25,13 +28,15 @@ public class TouchHandler : Singleton<TouchHandler>
         {
             return;
         }
-        
+
         var delta = LeanGesture.GetScreenDelta(fingers);
 
-        OnTouchRotate?.Invoke(-Mathf.Clamp(delta.x * 0.5f, -5, 5));
+        var adjusted = Mathf.Clamp(-delta.x * 0.4f, -_clampValue, _clampValue);
+//        var adjusted = -delta.x * 0.4f;
+        
+        OnTouchRotate?.Invoke(adjusted);
     }
 
-   
 
-    public static Action<float> OnTouchRotate;
+
 }

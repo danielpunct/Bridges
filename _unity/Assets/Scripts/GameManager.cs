@@ -36,13 +36,13 @@ public class GameManager : Singleton<GameManager>
 
     public void PassedLevel()
     {
-        State = GameState.LevelEnding;
-        
-        Player.SaveLevelPassed();
-        
-        _seq?.Kill();
-        _seq = DOTween.Sequence()
-            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
+//        State = GameState.LevelEnding;
+//        
+//        Player.SaveLevelPassed();
+//        
+//        _seq?.Kill();
+//        _seq = DOTween.Sequence()
+//            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
     }
 
     public void PlayerDied()
@@ -61,7 +61,7 @@ public class GameManager : Singleton<GameManager>
         
         _seq?.Kill();
         _seq = DOTween.Sequence()
-            .InsertCallback(3, () => PlayLevel(Player.CurrentLevel));
+            .InsertCallback(0.3f, () => PlayLevel(Player.CurrentLevel));
     }
 
     public void OnMenuButtonClick()

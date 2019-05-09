@@ -6,7 +6,18 @@ using UnityEngine;
 public class Rotator : MonoBehaviour
 {
     public Transform pivot;
-    
+    public float damping = 100;
+
+    Transform _tr;
+    float _targetRotattion;
+
+   public  Rigidbody2D _rb;
+
+    void Awake()
+    {
+        _tr = transform;
+    }
+
     void OnEnable()
     {
         TouchHandler.OnTouchRotate += Rotate;
@@ -20,6 +31,21 @@ public class Rotator : MonoBehaviour
 
     void Rotate(float rotation)
     {
-        pivot.Rotate(new Vector3(0,0,rotation));
+        _targetRotattion += rotation;
+    }
+
+    void FixedUpdate()
+    {
+        if (_rb != null)
+        {
+            _rb.DORotate(_targetRotattion, Time.deltaTime);
+        }
+        else
+        {
+//            var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, _tr.eulerAngles.y, _targetRotattion);
+//            transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, 0.5f);
+
+            pivot.DOLocalRotate(new Vector3(0, 0, _targetRotattion), Time.fixedDeltaTime);
+        }
     }
 }
