@@ -31,8 +31,7 @@ public class TouchHandler : Singleton<TouchHandler>
 
         var delta = LeanGesture.GetScreenDelta(fingers);
 
-        var adjusted = Mathf.Clamp(-delta.x * 0.4f, -_clampValue, _clampValue);
-//        var adjusted = -delta.x * 0.4f;
+        var adjusted = Mathf.Clamp(-(delta.x + delta.y) * 0.3f, -_clampValue, _clampValue);
         
         OnTouchRotate?.Invoke(adjusted);
     }

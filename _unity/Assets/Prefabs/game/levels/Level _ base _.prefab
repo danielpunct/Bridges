@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c168ddbb5e25e4dac2ca32c51f3890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spring: {fileID: 0}
+  springAnchor: {fileID: 0}
 --- !u!1001 &2393567825862138121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -186,6 +188,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221521148825315003, guid: dc949d03c5784a24b9ba5689522ee4c0,
+        type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 8976456022866622776}
+    - target: {fileID: 5722540816749306386, guid: dc949d03c5784a24b9ba5689522ee4c0,
+        type: 3}
+      propertyPath: m_Distance
+      value: 1.8231214
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc949d03c5784a24b9ba5689522ee4c0, type: 3}

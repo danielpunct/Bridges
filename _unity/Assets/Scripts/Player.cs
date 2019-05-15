@@ -7,76 +7,77 @@ public class Player : MonoBehaviour
 {
     public GameObject collideEffectHolder;
     public GameObject dieEffectHolder;
-    
+    public Level level;
+
     Rigidbody2D _rb;
     Sequence _seq;
-    Vector2 oldVelocity;
+    Vector2 _oldVelocity;
+    const float ClampedVelocity = 4f;
+
+
+    public SpringJoint2D spring;
+    public Transform springAnchor;
 
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        
+
         dieEffectHolder.SetActive(false);
         collideEffectHolder.SetActive(false);
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        var impulse = other.contacts[0].normalImpulse;
-        var v = _rb.velocity.magnitude;
+        var contactPoint = other.contacts[0];
+        var impulse = contactPoint.normalImpulse;
 
-        if (impulse > 1)
+        if (impulse > 10)
         {
-            var g =Instantiate(collideEffectHolder, other.contacts[0].point, Quaternion.identity,
+            var g = Instantiate(collideEffectHolder, contactPoint.point, Quaternion.identity,
                 transform.parent);
             g.SetActive(true);
             SoundManager.Instance.PlayCollide();
         }
+
+        SetCollisionSpring(contactPoint);
     }
+
+    void SetCollisionSpring( ContactPoint2D contactPoint)
+    {
+        springAnchor.SetParent(contactPoint.collider.transform);
+        springAnchor.position = contactPoint.point;
+        spring.enabled = true;
+    }
+
 
     public void Die()
     {
         GameManager.Instance.PlayerDied();
 
         GetComponent<Rigidbody2D>().isKinematic = true;
-        
+
         SoundManager.Instance.PlayEnemyCollide();
-        
-        var g =Instantiate(dieEffectHolder, transform.position, Quaternion.identity,
+
+        var g = Instantiate(dieEffectHolder, transform.position, Quaternion.identity,
             transform.parent);
         g.SetActive(true);
         gameObject.SetActive(false);
-        
     }
 
-    float max = 0f;
+
     void FixedUpdate()
     {
-        var velo = _rb.velocity;
-        
+        spring.connectedAnchor = springAnchor.position;
+        if (spring.distance > 4)
+        {
+            spring.enabled = false;
+        }
+
         var mag = _rb.velocity.magnitude;
-        var oldMag = oldVelocity.magnitude;
-        
-        if (mag != 0 && oldMag != 0)
+        if (mag > ClampedVelocity)
         {
-            if (oldMag / mag < 0.8f)
-            {
-                _rb.velocity = velo.normalized * 1.1f;
-            }
-        }
-
-        if (mag > max)
-        {
-//            Debug.Log(v);
-            max = mag;
-        }
-
-        if (mag > 10)
-        {
-            var clamped = _rb.velocity.normalized * 3;
+            var clamped = _rb.velocity.normalized * ClampedVelocity;
             _rb.velocity = clamped;
         }
-
-        oldVelocity = velo;
     }
 }

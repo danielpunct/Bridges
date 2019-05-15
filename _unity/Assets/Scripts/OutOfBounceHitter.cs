@@ -6,11 +6,18 @@ public class OutOfBounceHitter : MonoBehaviour
 {
     void OnTriggerStay2D(Collider2D other)
     {
-        if (GameManager.Instance.State == GameState.Play)
+        if (other.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.PlayerOutOfBounds();
+            if (GameManager.Instance.State == GameState.Play)
+            {
+                GameManager.Instance.PlayerOutOfBounds();
             
-            SoundManager.Instance.PlayOutOfBounds();
+                SoundManager.Instance.PlayOutOfBounds();
+            }
+        }
+        else
+        {
+            other.gameObject.SetActive(false);
         }
     }
 }
