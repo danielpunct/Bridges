@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -12,7 +13,22 @@ public class Player : MonoBehaviour
     Rigidbody2D _rb;
     Sequence _seq;
     Vector2 _oldVelocity;
-    const float ClampedVelocity = 4f;
+
+    float _clampedVelocity
+    {
+        get
+        {
+            if (_lastContactTime <= -1)
+            {
+                return 4;
+            }
+            
+            var deltaTime = Time.time - _lastContactTime;
+            return 4 + deltaTime*5;
+        }
+    }
+
+    float _lastContactTime = -1;
 
 
     public SpringJoint2D spring;
@@ -31,7 +47,7 @@ public class Player : MonoBehaviour
         var contactPoint = other.contacts[0];
         var impulse = contactPoint.normalImpulse;
 
-        if (impulse > 10)
+        if (impulse > 2)
         {
             var g = Instantiate(collideEffectHolder, contactPoint.point, Quaternion.identity,
                 transform.parent);
@@ -42,11 +58,16 @@ public class Player : MonoBehaviour
         SetCollisionSpring(contactPoint);
     }
 
+    void OnCollisionExit2D(Collision2D other)
+    {
+        _lastContactTime = Time.time;
+    }
+
     void SetCollisionSpring( ContactPoint2D contactPoint)
     {
         springAnchor.SetParent(contactPoint.collider.transform);
         springAnchor.position = contactPoint.point;
-        spring.enabled = true;
+        //spring.enabled = true;
     }
 
 
@@ -74,9 +95,9 @@ public class Player : MonoBehaviour
         }
 
         var mag = _rb.velocity.magnitude;
-        if (mag > ClampedVelocity)
+        if (mag > _clampedVelocity)
         {
-            var clamped = _rb.velocity.normalized * ClampedVelocity;
+            var clamped = _rb.velocity.normalized * _clampedVelocity;
             _rb.velocity = clamped;
         }
     }
