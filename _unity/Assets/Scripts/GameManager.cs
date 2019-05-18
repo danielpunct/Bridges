@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
         _seq?.Kill();
         State = GameState.Play;
 
-        MenuManager.Instance.ShowGameMenu(levelIndex);
+        MenuManager.Instance.ShowGameMenu(levelIndex, Player.GemCount);
         GameArena.Instance.StartLevel(levelIndex);
         Player.SetLevelStart(levelIndex);
     }
@@ -75,6 +75,12 @@ public class GameManager : Singleton<GameManager>
     {
         State = GameState.Menu;
         MenuManager.Instance.ShowLevelsMenu();
+    }
+
+    public void PlayerHitGem(Gem gem)
+    {
+        MenuManager.Instance.gameScreen.ShowReceiveGem(gem);
+        Player.SaveReceiveGem();
     }
 }
 

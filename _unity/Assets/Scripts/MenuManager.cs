@@ -7,6 +7,8 @@ public class MenuManager : Singleton<MenuManager>
     public GameScreen gameScreen;
     public LevelsScreen levelsScreen;
 
+    public Transform overGameCanvas;
+
 
     public void Init()
     {
@@ -14,13 +16,13 @@ public class MenuManager : Singleton<MenuManager>
         ShowHomeMenu();
     }
 
-    public void ShowGameMenu(int levelIndex)
+    public void ShowGameMenu(int levelIndex, int gemCount)
     {
         levelsScreen.gameObject.SetActive(false);
         homeScreen.SetActive(false);
         gameScreen.gameObject.SetActive(true);
         
-        gameScreen._Reset(levelIndex);
+        gameScreen._Reset(levelIndex, gemCount);
     }
 
     public void ShowHomeMenu()

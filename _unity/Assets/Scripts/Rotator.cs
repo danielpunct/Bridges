@@ -6,7 +6,6 @@ using UnityEngine;
 public class Rotator : MonoBehaviour
 {
     public Transform pivot;
-    public float damping = 100;
 
     Transform _tr;
     float _targetRotattion;
@@ -38,7 +37,7 @@ public class Rotator : MonoBehaviour
     {
         if (_rb != null)
         {
-            _rb.DORotate(_targetRotattion, Time.deltaTime);
+            _rb.DORotate(_targetRotattion, Time.fixedDeltaTime);
         }
         else
         {
