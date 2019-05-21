@@ -5915,10 +5915,27 @@ MonoBehaviour:
   - {fileID: 666194514545752823, guid: 974bdeb8f6fb05c4c81592c2c01ca843, type: 3}
   - {fileID: 666194514545752823, guid: 745d6c07ddabbda45a4b4e37eb1b91e0, type: 3}
   - {fileID: 666194514545752823, guid: 0ec2f194ad9578a45a52c3b46ff1c15e, type: 3}
+  - {fileID: 666194514545752823, guid: 72e534a27c9033c478ea29b80a006395, type: 3}
+  - {fileID: 666194514545752823, guid: a52e6d45cbb20584dae69d8d26e86594, type: 3}
   - {fileID: 666194514545752823, guid: 16b871a209fee4346aba1be714195e9e, type: 3}
+  - {fileID: 666194514545752823, guid: 40b3ae9242d8b7742a5a6e5c7c7cbb0f, type: 3}
   - {fileID: 666194514545752823, guid: e9b0792f8b7ab8649b43c4818e1f218b, type: 3}
+  - {fileID: 666194514545752823, guid: a427c5030c3304840bb0841cd3369cf4, type: 3}
+  - {fileID: 666194514545752823, guid: fb0cf1f2cc21975468cb4b2845613a07, type: 3}
   - {fileID: 666194514545752823, guid: 491033802cacc2b4ebe809f4da720fa2, type: 3}
+  - {fileID: 666194514545752823, guid: 3f186a2db75c00a49bd5e85086ebdbe2, type: 3}
+  - {fileID: 666194514545752823, guid: 17ff7a949340b3b459fd2b25ca6dcd13, type: 3}
+  - {fileID: 666194514545752823, guid: ee65acafa13d030479fcc449021b3646, type: 3}
+  - {fileID: 666194514545752823, guid: f4dab1dbe4132334ea4cf7e9c1c3ef76, type: 3}
+  - {fileID: 666194514545752823, guid: 1839191bc32d1a347ad9a51972f6ac83, type: 3}
+  - {fileID: 666194514545752823, guid: 5246ce0ffe8907a43b1b801f9cf22933, type: 3}
+  - {fileID: 666194514545752823, guid: 9847e09b64a4f6043bf44b9ad8d077e5, type: 3}
+  - {fileID: 666194514545752823, guid: e8e4f0bc934c2a946adc313b5c8a2cc4, type: 3}
+  - {fileID: 666194514545752823, guid: 1bae994d6cb6d0c48b3307580b2ac687, type: 3}
+  - {fileID: 666194514545752823, guid: c1c13552c12af444daaddbc5080511ca, type: 3}
   - {fileID: 666194514545752823, guid: 7c7b1d04dd9ad2b43b406eca7d5aa566, type: 3}
+  - {fileID: 666194514545752823, guid: d06a53ead9cf94645a665758fce438f5, type: 3}
+  - {fileID: 666194514545752823, guid: efd575a5e855f2343b7a6601832dde5f, type: 3}
   - {fileID: 666194514545752823, guid: 4b312c9d69c7632428d090a5be80028b, type: 3}
   levelHolder: {fileID: 559498217}
 --- !u!1001 &1457035384
@@ -11688,7 +11705,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.7
+  m_fontSize: 60.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
