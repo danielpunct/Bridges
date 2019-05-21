@@ -80,7 +80,7 @@ public class GameManager : Singleton<GameManager>
     public void PlayerHitGem(Gem gem)
     {
         MenuManager.Instance.gameScreen.ShowReceiveGem(gem);
-        Player.SaveReceiveGem();
+        Player.SaveReceiveGem(Player.CurrentLevel);
     }
 }
 
