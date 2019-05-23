@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
     public PlayerState Player { get; private set; }
     public GameState State { get; private set; }
 
+    
     Sequence _seq;
 
     void Awake()
@@ -64,6 +65,7 @@ public class GameManager : Singleton<GameManager>
     public void PlayerOutOfBounds()
     {
         MenuManager.Instance.gameScreen.ShowOutOfBounds();
+        GameArena.Instance.currentPot.ShowOutOfBounds();
         State = GameState.LevelEnding;
         
         _seq?.Kill();

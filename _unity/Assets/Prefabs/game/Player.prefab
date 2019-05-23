@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 6221521148825315003}
   - component: {fileID: 3050936988036187771}
   - component: {fileID: 5722540816749306386}
+  - component: {fileID: 6441978301168014999}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -137,7 +138,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1b395568f3ca83b49bcc4a22f92b4691, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f68adff0e6df9458190e9257ba0da300, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,7 +164,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.20434782
+  m_Radius: 0.18
 --- !u!50 &4162225922730260299
 Rigidbody2D:
   serializedVersion: 4
@@ -335,6 +336,30 @@ SpringJoint2D:
   m_Distance: 1.304782
   m_DampingRatio: 0
   m_Frequency: 1
+--- !u!114 &6441978301168014999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4162225922730260309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf545f89b3d9437a911a01346df723e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: f68adff0e6df9458190e9257ba0da300, type: 3}
+  - {fileID: 21300000, guid: 5b1f771376955429abe60e2f766dd9d8, type: 3}
+  - {fileID: 21300000, guid: e770eb13f4a114d47b18806a213ef553, type: 3}
+  - {fileID: 21300000, guid: e1c661f5b27f64eb4a5612f09b0973f3, type: 3}
+  - {fileID: 21300000, guid: 4fc8d41c2eb174a2e997fa590d433ee7, type: 3}
+  spriteDuration: 6
+  loop: 1
+  loopDelay: 2
+  destroyOnEnd: 0
+  RePlayOnEnable: 1
+  CanPlay: 1
 --- !u!1 &4188144165681620851
 GameObject:
   m_ObjectHideFlags: 0

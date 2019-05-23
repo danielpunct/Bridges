@@ -4276,8 +4276,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Level 6
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00e8d9c7cde2040b3a0994f5318fabbb, type: 2}
+  m_sharedMaterial: {fileID: 6428354924332926956, guid: 00e8d9c7cde2040b3a0994f5318fabbb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4302,13 +4303,13 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 48.6
+  m_fontSize: 54.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 17
+  m_fontStyle: 16
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -4433,8 +4434,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 23
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00e8d9c7cde2040b3a0994f5318fabbb, type: 2}
+  m_sharedMaterial: {fileID: 6428354924332926956, guid: 00e8d9c7cde2040b3a0994f5318fabbb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10874,6 +10876,7 @@ MonoBehaviour:
   - {fileID: 666194514545752823, guid: efd575a5e855f2343b7a6601832dde5f, type: 3}
   - {fileID: 666194514545752823, guid: 4b312c9d69c7632428d090a5be80028b, type: 3}
   levelHolder: {fileID: 559498217}
+  currentPot: {fileID: 0}
 --- !u!1001 &1457035384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16447,8 +16450,8 @@ RectTransform:
   m_Father: {fileID: 987519108}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.16331685}
-  m_AnchorMax: {x: 1, y: 0.83668447}
+  m_AnchorMin: {x: 0, y: 0.1226057}
+  m_AnchorMax: {x: 1, y: 0.77561754}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -16474,8 +16477,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: level 345
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00e8d9c7cde2040b3a0994f5318fabbb, type: 2}
+  m_sharedMaterial: {fileID: 6428354924332926956, guid: 00e8d9c7cde2040b3a0994f5318fabbb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16500,7 +16504,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 39.5
+  m_fontSize: 42.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16604,7 +16608,7 @@ RectTransform:
   m_Father: {fileID: 1868222068}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.2751585, y: 0.93073976}
+  m_AnchorMin: {x: 0.2751585, y: 0.92283964}
   m_AnchorMax: {x: 0.72643703, y: 0.96957904}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -16631,8 +16635,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Out Of Bounds
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00e8d9c7cde2040b3a0994f5318fabbb, type: 2}
+  m_sharedMaterial: {fileID: 6428354924332926956, guid: 00e8d9c7cde2040b3a0994f5318fabbb,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16657,7 +16662,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.7
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -18216,8 +18221,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 3
-      minScalar: 1
+      scalar: 1
+      minScalar: 0.4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -18385,8 +18390,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.1
+      scalar: 0.3
+      minScalar: 0.08
       maxCurve:
         serializedVersion: 2
         m_Curve:

@@ -8,6 +8,8 @@ public class GameArena : Singleton<GameArena>
     public Transform levelHolder;
 
     Level _loadedLevel;
+    public PotHitter currentPot;
+
 
     public void _Reset()
     {
@@ -25,5 +27,10 @@ public class GameArena : Singleton<GameArena>
         {
             _loadedLevel = Instantiate(levelsPrefabs[index], levelHolder).GetComponent<Level>();
         }
+    }
+
+    public void RegisterCurrentPot(PotHitter pot)
+    {
+        this.currentPot = pot;
     }
 }
