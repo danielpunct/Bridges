@@ -25,7 +25,6 @@ public class GameScreen : MonoBehaviour
 
    public void ShowOutOfBounds()
    {
-      levelHolder.SetActive(false);
       outOfBoundsText.gameObject.SetActive(true);
    }
 

@@ -23,9 +23,9 @@ public class GameArena : Singleton<GameArena>
     {
         _Reset();
 
-        if (levelsPrefabs.Length > index)
+        if (levelsPrefabs.Length > index % 30)
         {
-            _loadedLevel = Instantiate(levelsPrefabs[index], levelHolder).GetComponent<Level>();
+            _loadedLevel = Instantiate(levelsPrefabs[index % 30], levelHolder).GetComponent<Level>();
         }
     }
 

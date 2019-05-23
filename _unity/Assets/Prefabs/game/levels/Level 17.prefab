@@ -15,12 +15,12 @@ PrefabInstance:
     - target: {fileID: 393398810215256590, guid: 8afd0bb71ada7394e9f2cd9c16bfbcee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.92
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 393398810215256590, guid: 8afd0bb71ada7394e9f2cd9c16bfbcee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 393398810215256590, guid: 8afd0bb71ada7394e9f2cd9c16bfbcee,
         type: 3}
@@ -299,12 +299,12 @@ PrefabInstance:
     - target: {fileID: 7505602443220821423, guid: 57caed764d3109147bb75be48a2dad52,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.70710707
       objectReference: {fileID: 0}
     - target: {fileID: 7505602443220821423, guid: 57caed764d3109147bb75be48a2dad52,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710653
       objectReference: {fileID: 0}
     - target: {fileID: 7505602443220821423, guid: 57caed764d3109147bb75be48a2dad52,
         type: 3}
@@ -324,7 +324,7 @@ PrefabInstance:
     - target: {fileID: 7505602443220821423, guid: 57caed764d3109147bb75be48a2dad52,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90.00001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57caed764d3109147bb75be48a2dad52, type: 3}
@@ -514,12 +514,12 @@ PrefabInstance:
     - target: {fileID: 1597837857829099725, guid: bbf02ed3bb5a585408440027b7c63760,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.79
+      value: -2.93
       objectReference: {fileID: 0}
     - target: {fileID: 1597837857829099725, guid: bbf02ed3bb5a585408440027b7c63760,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.33
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 1597837856977178994, guid: bbf02ed3bb5a585408440027b7c63760,
         type: 3}

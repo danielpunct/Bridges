@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    public int LoadedLevels => GameArena.Instance.levelsPrefabs.Length;
+    public int LoadedLevels => GameArena.Instance.levelsPrefabs.Length * 7;
 
     public PlayerState Player { get; private set; }
 
