@@ -8,6 +8,8 @@ public class MenuManager : Singleton<MenuManager>
     public LevelsScreen levelsScreen;
 
     public Transform overGameCanvas;
+    public GameObject levelsButton;
+    
 
 
     public void Init()
@@ -21,6 +23,7 @@ public class MenuManager : Singleton<MenuManager>
         levelsScreen.gameObject.SetActive(false);
         homeScreen.SetActive(false);
         gameScreen.gameObject.SetActive(true);
+        levelsButton.SetActive(true);
         
         gameScreen._Reset(levelIndex, gemCount);
     }
@@ -30,12 +33,21 @@ public class MenuManager : Singleton<MenuManager>
         homeScreen.SetActive(true);
         gameScreen.gameObject.SetActive(false);
         levelsScreen.gameObject.SetActive(false);
+        levelsButton.SetActive(true);
     }
     
     public void ShowLevelsMenu()
     {
         levelsScreen.gameObject.SetActive(true);
-        homeScreen.SetActive(false);
-        gameScreen.gameObject.SetActive(false);
+        levelsScreen.RefreshLevels();
+        levelsButton.SetActive(false);
+
     }
+
+    public void HideLevelsScreen()
+    {
+        levelsScreen.gameObject.SetActive(false);
+        levelsButton.SetActive(true);
+    }
+    
 }

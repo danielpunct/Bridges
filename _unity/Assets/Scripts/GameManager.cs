@@ -7,8 +7,20 @@ public class GameManager : Singleton<GameManager>
     public int LoadedLevels => GameArena.Instance.levelsPrefabs.Length;
 
     public PlayerState Player { get; private set; }
-    public GameState State { get; private set; }
 
+    public GameState _state;
+
+    public GameState State
+    {
+        get => _state;
+        set
+        {
+            cacheState = _state;
+            _state = value;
+        }
+    }
+
+    GameState cacheState;
     
     Sequence _seq;
 
@@ -83,6 +95,12 @@ public class GameManager : Singleton<GameManager>
     {
         MenuManager.Instance.gameScreen.ShowReceiveGem(gem);
         Player.SaveReceiveGem(Player.CurrentLevel);
+    }
+
+    public void OnBackFromLevelsClick()
+    {
+        State = cacheState;
+        MenuManager.Instance.HideLevelsScreen();
     }
 }
 

@@ -26,4 +26,12 @@ public class LevelsScreen : MonoBehaviour
 
     loadedButtons = buttons.ToArray();
   }
+
+  public void RefreshLevels()
+  {
+    foreach (var button in loadedButtons)
+    {
+      button.Refresh();
+    }
+  }
 }
