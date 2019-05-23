@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: sealedlab
+  companyName: sealedsoft
   productName: Bridges
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -161,7 +161,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.sealedlab.bridges
     Standalone: com.Company.ProductName
-    iPhone: com.sealedlab.bridges
+    iPhone: com.sealedsoft.bridges
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
