@@ -31,4 +31,11 @@ public class SoundManager : Singleton<SoundManager>
     {
         audioSource.PlayOneShot(success);
     }
+    
+    public void SetAudio(bool on)
+    {
+        audioSource.mute = !on;
+        
+        GameManager.Instance.Player.SaveSound(on);
+    }
 }

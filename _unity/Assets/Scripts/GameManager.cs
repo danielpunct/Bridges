@@ -102,6 +102,8 @@ public class GameManager : Singleton<GameManager>
         State = cacheState;
         MenuManager.Instance.HideLevelsScreen();
     }
+
+ 
 }
 
 public enum GameState

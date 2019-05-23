@@ -8,13 +8,15 @@ public class PlayerState
    public int MaxLoadedLevel { get; set; }
    public int MaxUnlockedLevel { get; set; }
    public int CurrentLevel { get; set; }
-   public int GemCount { get; set; }
-   int[] _collectedGems;
+   public int Sound { get; private set; }
+   public int GemCount { get; private set; }
+   readonly int[] _collectedGems;
 
    string MaxUnlockedLevel_tag = "MaxUnlockedLevel";
    string CurrentLevel_tag = "CurrentLevel";
    string GemCount_tag = "GemCount";
    string GemCollected_tag = "GemCollected";
+   string Sound_tag = "Sound";
 
    public  PlayerState()
    {
@@ -29,8 +31,15 @@ public class PlayerState
       MaxUnlockedLevel = PlayerPrefs.GetInt(MaxUnlockedLevel_tag, 0);
       CurrentLevel = PlayerPrefs.GetInt(CurrentLevel_tag, 0);
       GemCount = PlayerPrefs.GetInt(GemCount_tag, 0);
+      Sound = PlayerPrefs.GetInt(Sound_tag, 1);
    }
 
+   public void SaveSound(bool on)
+   {
+      Sound = on ? 1 : 0;
+      PlayerPrefs.SetInt(Sound_tag, Sound);
+   }
+   
    public void SaveLevelPassed()
    {
       CurrentLevel++;
