@@ -82,7 +82,7 @@ public class GameManager : Singleton<GameManager>
         
         _seq?.Kill();
         _seq = DOTween.Sequence()
-            .InsertCallback(0.3f, () => PlayLevel(Player.CurrentLevel));
+            .InsertCallback(0.7f, () => PlayLevel(Player.CurrentLevel));
     }
 
     public void OnMenuButtonClick()
