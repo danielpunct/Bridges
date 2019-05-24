@@ -42,6 +42,7 @@ public class PlayerState
    
    public void SaveLevelPassed()
    {
+      FbManager.Instance.LogEvent(CurrentLevel);
       CurrentLevel++;
       MaxUnlockedLevel = Mathf.Max(MaxUnlockedLevel, CurrentLevel );
 

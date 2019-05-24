@@ -49,10 +49,13 @@ public class FbManager : Singleton<FbManager>
         }
     }
 
-    public void LogEvent()
+    public void LogEvent(int levelPassed)
     {
+        var param = new Dictionary<string, object>();
+        param[AppEventParameterName.Level] = levelPassed;
         FB.LogAppEvent (
-            AppEventName.AchievedLevel
+            AppEventName.AchievedLevel,
+            parameters: param
         );
     }
 }
