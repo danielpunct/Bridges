@@ -5,7 +5,8 @@ public class AfManager : Singleton<AfManager>
     void Start()
     {
 /* Mandatory - set your AppsFlyer’s Developer key. */
-        AppsFlyer.setAppsFlyerKey("zcKrZYJWnrWWctCxcLNnyT");
+        AppsFlyer.setAppsFlyerKey("VZNM46nRRK4oBmMs3zdqdG");
+//        AppsFlyer.setAppsFlyerKey("zcKrZYJWnrWWctCxcLNnyT");
 /* For detailed logging */
 /* AppsFlyer.setIsDebug (true); */
 #if UNITY_IOS
